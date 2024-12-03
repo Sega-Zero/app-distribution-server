@@ -16,4 +16,4 @@ ENV KEYS_URL="osfs:///keys"
 
 EXPOSE 8000
 
-CMD ["uvicorn", "--ssl-keyfile=$KEYS_URL/key.pem", "--ssl-certfile=$KEYS_URL/cert.pem", "--host=0.0.0.0", "--port=8000", "app_distribution_server.app:app"]
+CMD ["uvicorn", "--ssl-keyfile=/keys/key.pem", "--ssl-certfile=/keys/cert.pem", "--host=0.0.0.0", "--port=8000", "app_distribution_server.app:app"]
