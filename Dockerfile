@@ -15,4 +15,4 @@ ENV STORAGE_URL="osfs:///uploads"
 
 EXPOSE 8000
 
-CMD ["uvicorn", "--host=0.0.0.0", "--port=8000", "app_distribution_server.app:app"]
+CMD ["uvicorn", "--ssl-keyfile=./key.pem", "--ssl-certfile=./cert.pem", "--host=0.0.0.0", "--port=8000", "app_distribution_server.app:app"]
